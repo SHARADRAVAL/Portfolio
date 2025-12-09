@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raval Sharad | Full Stack Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        dark: '#0a0a0a',
+                        card: '#121212',
+                        primary: '#3b82f6', // Blue-500
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Cyber Grid Background */
+        body {
+            background-color: #050505;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+        
+        /* Text Gradient */
+        .text-gradient {
+            background: linear-gradient(135deg, #60a5fa 0%, #a855f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Card Hover Glow */
+        .tech-card {
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .tech-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(59, 130, 246, 0.5);
+            box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.3);
+        }
+    </style>
+</head>
+<body class="text-gray-400 antialiased selection:bg-blue-500 selection:text-white">
+
+    <nav class="fixed w-full z-50 top-0 start-0 border-b border-white/10 bg-dark/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between px-6 py-4">
+            <a href="#" class="flex items-center space-x-2 rtl:space-x-reverse">
+                <span class="self-center text-2xl font-bold whitespace-nowrap text-white">Sharad<span class="text-blue-500">.Dev</span></span>
+            </a>
+            <div class="hidden w-full md:block md:w-auto">
+                <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
+                    <li><a href="#about" class="block py-2 px-3 text-white rounded hover:text-blue-500 transition">About</a></li>
+                    <li><a href="#skills" class="block py-2 px-3 text-white rounded hover:text-blue-500 transition">Stack</a></li>
+                    <li><a href="#projects" class="block py-2 px-3 text-white rounded hover:text-blue-500 transition">Work</a></li>
+                    <li><a href="#contact" class="block py-2 px-3 text-white bg-blue-600 rounded-full hover:bg-blue-700 transition px-6">Hire Me</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="min-h-screen flex items-center justify-center pt-20">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-blue-500/20 bg-blue-500/5 text-blue-400 text-sm font-medium mb-8">
+                <span class="relative flex h-2 w-2">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                </span>
+                Available for New Projects
+            </div>
+            
+            <h1 class="text-6xl md:text-8xl font-bold text-white tracking-tight mb-8">
+                I build robust <br>
+                <span class="text-gradient">web applications.</span>
+            </h1>
+            
+            <p class="text-xl md:text-2xl text-gray-400 max-w-2xl mx-auto mb-12 leading-relaxed">
+                MCA Candidate & Full Stack Developer. I specialize in the <strong class="text-white">Laravel</strong> ecosystem, creating secure, scalable, and user-centric digital solutions.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <!-- <a href="#projects" class="px-8 py-4 bg-white text-black font-bold rounded-lg hover:bg-gray-200 transition">
+                    View My Code
+                </a> -->
+                <a href="https://github.com/" class="px-8 py-4 border border-white/20 bg-white/5 text-white font-bold rounded-lg hover:bg-white/10 transition flex items-center justify-center gap-2">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/sharad-raval/" class="px-8 py-4 border border-white/20 bg-white/5 text-white font-bold rounded-lg hover:bg-white/10 transition flex items-center justify-center gap-2">
+                    <i class="fab fa-linkedin"></i> linkedin
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-24 border-t border-white/5">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white mb-4">Technology Stack</h2>
+                <p class="text-gray-500">My preferred tools for building modern applications.</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="tech-card bg-card p-6 rounded-xl flex flex-col items-center justify-center gap-4">
+                    <i class="fab fa-php text-5xl text-indigo-400"></i>
+                    <span class="font-semibold text-white">PHP 8+</span>
+                </div>
+                <div class="tech-card bg-card p-6 rounded-xl flex flex-col items-center justify-center gap-4">
+                    <i class="fab fa-laravel text-5xl text-red-500"></i>
+                    <span class="font-semibold text-white">Laravel 12</span>
+                </div>
+                <div class="tech-card bg-card p-6 rounded-xl flex flex-col items-center justify-center gap-4">
+                    <i class="fas fa-database text-5xl text-blue-400"></i>
+                    <span class="font-semibold text-white">MySQL</span>
+                </div>
+                <div class="tech-card bg-card p-6 rounded-xl flex flex-col items-center justify-center gap-4">
+                    <i class="fab fa-js text-5xl text-yellow-400"></i>
+                    <span class="font-semibold text-white">JavaScript</span>
+                </div>
+                <div class="tech-card bg-card p-6 rounded-xl flex flex-col items-center justify-center gap-4">
+                    <i class="fas fa-mobile-alt text-5xl text-cyan-400"></i>
+                    <span class="font-semibold text-white">Flutter</span>
+                </div>
+                <div class="tech-card bg-card p-6 rounded-xl flex flex-col items-center justify-center gap-4">
+                    <i class="fab fa-bootstrap text-5xl text-purple-600"></i>
+                    <span class="font-semibold text-white">Bootstrap</span>
+                </div>
+                 <div class="tech-card bg-card p-6 rounded-xl flex flex-col items-center justify-center gap-4">
+                    <i class="fab fa-git-alt text-5xl text-orange-500"></i>
+                    <span class="font-semibold text-white">Git/GitHub</span>
+                </div>
+                <div class="tech-card bg-card p-6 rounded-xl flex flex-col items-center justify-center gap-4">
+                    <i class="fas fa-server text-5xl text-green-500"></i>
+                    <span class="font-semibold text-white">RESTful API</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24 border-t border-white/5 bg-black/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+                <div>
+                    <h2 class="text-4xl font-bold text-white mb-4">Featured Work</h2>
+                    <p class="text-gray-400 max-w-lg">
+                        Selected projects that demonstrate my ability to solve complex backend and frontend challenges.
+                    </p>
+                </div>
+                <a href="#" class="text-blue-500 hover:text-blue-400 font-medium flex items-center gap-2">
+                    View All Projects <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                
+                <div class="group relative bg-card border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/50 transition duration-300">
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="bg-blue-500/10 p-3 rounded-lg text-blue-400">
+                                <i class="fas fa-hospital text-2xl"></i>
+                            </div>
+                            <a href="#" class="text-gray-500 hover:text-white transition"><i class="fab fa-github text-2xl"></i></a>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-blue-400 transition">Patient Appointment System</h3>
+                        <p class="text-gray-400 mb-6 leading-relaxed">
+                            A secure Role-Based Access Control (RBAC) system. Prevented booking conflicts using complex database logic and implemented Middleware for admin security.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-gray-300">Laravel</span>
+                            <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-gray-300">MySQL</span>
+                            <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-gray-300">Auth</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative bg-card border border-white/10 rounded-2xl overflow-hidden hover:border-purple-500/50 transition duration-300">
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="bg-purple-500/10 p-3 rounded-lg text-purple-400">
+                                <i class="fas fa-calendar-alt text-2xl"></i>
+                            </div>
+                            <a href="#" class="text-gray-500 hover:text-white transition"><i class="fab fa-github text-2xl"></i></a>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-purple-400 transition">Event Management Platform</h3>
+                        <p class="text-gray-400 mb-6 leading-relaxed">
+                            Comprehensive platform for event lifecycle management. Integrated SweetAlert for asynchronous user feedback and built complex admin dashboards.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-gray-300">PHP</span>
+                            <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-gray-300">AJAX</span>
+                            <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-gray-300">SweetAlert</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative bg-card border border-white/10 rounded-2xl overflow-hidden hover:border-green-500/50 transition duration-300">
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="bg-green-500/10 p-3 rounded-lg text-green-400">
+                                <i class="fas fa-graduation-cap text-2xl"></i>
+                            </div>
+                            <a href="#" class="text-gray-500 hover:text-white transition"><i class="fab fa-github text-2xl"></i></a>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-green-400 transition">College Management System</h3>
+                        <p class="text-gray-400 mb-6 leading-relaxed">
+                            Streamlined academic processes including attendance and results. Designed a relational database schema to link students, courses, and faculties.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-gray-300">Core PHP</span>
+                            <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-gray-300">Relational DB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative bg-card border border-white/10 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition duration-300">
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="bg-cyan-500/10 p-3 rounded-lg text-cyan-400">
+                                <i class="fab fa-whatsapp text-2xl"></i>
+                            </div>
+                            <a href="#" class="text-gray-500 hover:text-white transition"><i class="fab fa-github text-2xl"></i></a>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-cyan-400 transition">WhatsApp Clone (UI)</h3>
+                        <p class="text-gray-400 mb-6 leading-relaxed">
+                            Mobile interface replica focusing on widget-based architecture and layout structuring in Flutter.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-gray-300">Flutter</span>
+                            <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-gray-300">Dart</span>
+                            <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-gray-300">Mobile</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 border-t border-white/5">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-white text-center mb-16">Education History</h2>
+            <div class="space-y-6">
+                <div class="bg-card border border-white/5 p-6 rounded-xl flex items-center justify-between hover:border-blue-500/30 transition">
+                    <div>
+                        <h3 class="text-xl font-bold text-white">Master of Computer Applications</h3>
+                        <p class="text-gray-500">LJ University, Ahmedabad</p>
+                    </div>
+                    <span class="px-4 py-2 bg-blue-500/10 text-blue-400 rounded-lg text-sm font-bold">Pursuing</span>
+                </div>
+                <div class="bg-card border border-white/5 p-6 rounded-xl flex items-center justify-between hover:border-gray-500/30 transition">
+                    <div>
+                        <h3 class="text-xl font-bold text-white">Bachelor of Computer Applications</h3>
+                        <p class="text-gray-500">HNGU, Patan</p>
+                        <p class="text-sm text-gray-600 mt-1">CGPA: 7.25</p>
+                    </div>
+                    <span class="px-4 py-2 bg-gray-800 text-gray-400 rounded-lg text-sm font-bold">2024</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="py-16 border-t border-white/5 bg-black text-center">
+        <h2 class="text-3xl font-bold text-white mb-8">Let's build something amazing.</h2>
+        <div class="flex justify-center gap-6 mb-8">
+            <a href="mailto:sharadraval101@gmail.com" class="text-xl text-gray-400 hover:text-white transition"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/sharad-raval" class="text-xl text-gray-400 hover:text-white transition"><i class="fab fa-linkedin"></i></a>
+            <a href="tel:8758443566" class="text-xl text-gray-400 hover:text-white transition"><i class="fas fa-phone"></i></a>
+        </div>
+        <p class="text-gray-600">© 2025 Raval Sharad. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
